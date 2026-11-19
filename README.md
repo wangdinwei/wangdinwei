@@ -2,6 +2,8 @@
 
 **把 AI 从「demo 跑通了」做到「能上线收钱」。**
 
+<sub>EN · I take AI from "the demo works" to "it ships and makes money." — [English version](https://github.com/wangdinwei/wangdinwei/blob/main/README.en.md)</sub>
+
 你的 AI 功能是不是卡在这一步：模型能出结果了，但做不成产品——不能计费、扛不住并发、改一次崩一次、半年后自己都不敢动？
 
 我专门做这一段。一个人从后端写到部署，做完过一套 11 步全流程的 AI 生产平台，也在一张 24G 显卡上把一批开源模型调到能用。
