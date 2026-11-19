@@ -9,10 +9,43 @@
 <p align="center">
   <a href="https://wangdinwei.github.io"><b>🖥 Personal site · wangdinwei.github.io</b></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="mailto:476743538@qq.com">✉ Email</a>
+  <a href="mailto:476743538@qq.com"><b>✉ Have work to discuss? Email me</b></a>
 </p>
 
 ---
+
+## What I take on — and what I don't
+
+**I take on:**
+
+- **AI features from prototype to production** — model integration, billing, permissions, concurrency, retries, deployment. The parts that make it survive real users.
+- **Rescue work on systems that keep failing** — a fixed triage path (process → port → proxy → logs → DB → external API); usually root cause within a day.
+- **Model deployment and VRAM tuning** — local or cloud: ComfyUI, FLUX, video and lipsync models, TTS, llama.cpp.
+- **Chinese document and data automation** — batch contract generation and review, ledger reconciliation, OCR reconstruction, PDF typesetting.
+- **Cost structure work** — in most AI video projects 85% of the spend is generation; cutting the reject rate beats switching vendors.
+
+**I don't take on:**
+
+- Visual design or branding (I'm not a designer)
+- Prompt-only work that never becomes a system
+- Decks without implementation (unless you explicitly want only a plan)
+- Projects with no way to verify the result
+- On-site or office-hours engagements
+
+**Mode:** remote, project-based or monthly. Solo — at most two projects in parallel.
+
+## How to reach me
+
+**📧 476743538@qq.com** — replies within 4 hours during working hours (UTC+8), next day otherwise.
+
+Write these four things and my first reply can already be a judgement and a quote:
+
+1. **What you want to build** — one sentence, the goal
+2. **Where you are now** — idea only / code that doesn't run / live but broken / replacing something
+3. **When you need it, and why that date**
+4. **Budget range** — a rough number is enough for me to say whether it's doable
+
+Need WeChat or a call? Say so in the email.
 
 ## What I fix
 
@@ -28,8 +61,8 @@
 
 **An AI content production platform** — from script to finished video, 11 production stages, multi-user, billing, redoable. Not a demo.
 
-| Scale | | |
-|---|---|---|
+| Scale | | | |
+|---|---|---|---|
 | **64,752** lines of Python | **2,484** routes | **32** database tables |
 | **626** page templates | **14,574** lines of JavaScript | **11** production stages |
 
@@ -66,17 +99,5 @@ Stack: Flask · PostgreSQL · Alembic · Jinja2 · esbuild · nginx · systemd �
 | Models | ComfyUI, FLUX, Wan, Sonic, LatentSync, IndexTTS, CosyVoice, Whisper, llama.cpp/vLLM |
 | Cloud APIs | Kling, Alibaba Bailian/DashScope, Volcengine, Runway, WeChat Pay v3, Feishu Open Platform |
 | Other | ffmpeg pipelines, Feishu/WeCom bots, document generation, jadx/apktool/Ghidra |
-
-## Scope (so we both save time)
-
-**I do**: AI application development, model integration and tuning, automation systems, rescue work, document/data automation
-**I don't do**: design-only work, prompt-only work, decks without implementation, projects with no way to verify the result
-
-**Mode**: remote, project-based or monthly.
-
-## Contact
-
-**Email: 476743538@qq.com** — fastest way to reach me
-Need WeChat or a call? Say so in the email and I'll send details.
 
 <sub>Updated regularly.</sub>
