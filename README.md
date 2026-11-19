@@ -47,6 +47,7 @@
 
 | | 仓库 | 内容 |
 |---|---|---|
+| ✍️ | [engineering-notes](https://github.com/wangdinwei/engineering-notes) | **技术文章**：21 个生产故障、显存陷阱、支付坑、成本结构 |
 | 📐 | [ai-drama-pipeline](https://github.com/wangdinwei/ai-drama-pipeline) | 案例复盘：架构、取舍、成本模型、**21 个真实故障** |
 | 🖥 | [local-gpu-deploy](https://github.com/wangdinwei/local-gpu-deploy) | 单卡 24G 跑开源模型：FLUX、ComfyUI、llama.cpp、音乐生成 |
 | 🎬 | [kling-ai-skills](https://github.com/wangdinwei/kling-ai-skills) | 可灵视频生产：角色一致性、口型对齐、提示词质量门禁 |

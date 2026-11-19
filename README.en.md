@@ -47,6 +47,7 @@ Stack: Flask · PostgreSQL · Alembic · Jinja2 · esbuild · nginx · systemd �
 
 | | Repo | What's in it |
 |---|---|---|
+| ✍️ | [engineering-notes](https://github.com/wangdinwei/engineering-notes) | **Articles**: 21 production failures, VRAM traps, payment pitfalls, cost structure |
 | 📐 | [ai-drama-pipeline](https://github.com/wangdinwei/ai-drama-pipeline) | Case study: architecture, trade-offs, cost model, **21 real failures** |
 | 🖥 | [local-gpu-deploy](https://github.com/wangdinwei/local-gpu-deploy) | Running open-source models on 24 GB: FLUX, ComfyUI, llama.cpp, music |
 | 🎬 | [kling-ai-skills](https://github.com/wangdinwei/kling-ai-skills) | Kling video production: identity consistency, lipsync, prompt quality gates |
