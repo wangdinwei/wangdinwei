@@ -6,6 +6,12 @@
 
 <sub>EN · I take AI from "the demo works" to "it ships and makes money." — [English version](README.en.md)</sub>
 
+<p align="center">
+  <a href="https://wangdinwei.github.io"><b>🖥 个人主页 · wangdinwei.github.io</b></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:476743538@qq.com">✉ 476743538@qq.com</a>
+</p>
+
 ---
 
 ## 我在解决这一类问题

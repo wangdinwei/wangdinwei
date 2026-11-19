@@ -6,6 +6,12 @@
 
 <sub>中文版 → [README.md](README.md)</sub>
 
+<p align="center">
+  <a href="https://wangdinwei.github.io"><b>🖥 Personal site · wangdinwei.github.io</b></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:476743538@qq.com">✉ Email</a>
+</p>
+
 ---
 
 ## What I fix
