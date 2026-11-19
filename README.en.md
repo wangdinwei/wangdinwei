@@ -1,8 +1,18 @@
 # Dingwei Wang · wangdinwei
 
-**Full-stack AI application engineer · Local model deployment · Automation systems**
+**I take AI from "the demo works" to "it ships and makes money."**
 
-I take AI from "it runs in a notebook" to "it runs in production." I've shipped a 65k-line Python business system and pushed a stack of open-source models to usable quality on a single 24 GB GPU.
+Most AI features die in the same place: the model returns a good result, but it never becomes a product — no billing, no concurrency, breaks on every change, and after six months nobody dares touch it.
+
+That gap is what I do. Solo, backend through deployment. I've shipped a complete 11-stage AI production platform, and tuned a stack of open-source models to usable quality on a single 24 GB GPU.
+
+## Sounds familiar?
+
+- The AI feature works, but you don't dare put it in front of users
+- It's live and keeps failing, and the logs don't explain why
+- Model costs won't come down
+- The existing system gets worse with every change
+- You want AI in your product but don't know where to start, or what it should cost
 
 ---
 
@@ -69,8 +79,7 @@ Batch contract generation and review, ledger reconciliation, OCR reconstruction 
 
 ## Contact
 
-- GitHub: [@wangdinwei](https://github.com/wangdinwei)
-- Email: (to fill)
-- WeChat: (to fill)
+- **Email**: 476743538@qq.com ← fastest way to reach me
+- WeChat / call available on request
 
 <sub>Updated regularly.</sub>
