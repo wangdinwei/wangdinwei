@@ -1,55 +1,51 @@
-# Dingwei Wang · wangdinwei
+<p align="center">
+  <img src="assets/banner.png" alt="Dingwei Wang — AI application engineer" width="100%">
+</p>
 
 **I take AI from "the demo works" to "it ships and makes money."**
 
-Most AI features die in the same place: the model returns a good result, but it never becomes a product — no billing, no concurrency, breaks on every change, and after six months nobody dares touch it.
-
-That gap is what I do. Solo, backend through deployment. I've shipped a complete 11-stage AI production platform, and tuned a stack of open-source models to usable quality on a single 24 GB GPU.
-
-## Sounds familiar?
-
-- The AI feature works, but you don't dare put it in front of users
-- It's live and keeps failing, and the logs don't explain why
-- Model costs won't come down
-- The existing system gets worse with every change
-- You want AI in your product but don't know where to start, or what it should cost
+<sub>中文版 → [README.md](README.md)</sub>
 
 ---
 
-## Selected work
+## What I fix
 
-### 1. AI Drama Workshop — a complete production platform (2026)
+| Where you are stuck | What I do |
+|---|---|
+| The AI feature works, but you don't dare ship it | Billing, permissions, concurrency, retries — the parts that make it survive real users |
+| It's live and keeps failing, logs don't explain why | A fixed triage path (process → port → proxy → logs → DB → external API); usually root cause in a day |
+| Model costs won't come down | Break down the cost first (in most projects 85% is video generation); cutting the reject rate beats switching vendors |
+| The system gets worse with every change | Dependency and data-flow audit first, then small refactors in risk order — no downtime |
+| You want AI in your product but don't know where to start | A concrete plan, a price, and phases that start with something verifiable |
 
-An end-to-end AI content production system: not a demo, a closed loop from signup to delivered video.
+## Track record
 
-- **Scale**: 64,752 lines of Python · 14,574 lines of JavaScript · 626 HTML templates · 2,484 routes · 32 database tables
-- **Pipeline**: script → storyboard → prompts → images → video → voiceover → subtitles → assembly, across 11 production stages
-- **Model integrations**: Kling (video), Alibaba Bailian (TTS / multi-model), Volcengine (speech), DashScope
-- **Engineering**: PostgreSQL as single source of truth, Alembic migrations, credit-based billing, WeChat Pay v3, Chatwoot support handoff, async task queue with multi-worker `SELECT FOR UPDATE SKIP LOCKED`, timeout and retry handling
-- **Hard problems solved**: multi-worker shared-state, payment callback signature verification, dual CSRF systems, gunicorn/SQLAlchemy fork safety, per-role file serving via X-Accel-Redirect
+**An AI content production platform** — from script to finished video, 11 production stages, multi-user, billing, redoable. Not a demo.
 
-> In short: a system that can take money, survive failure, and keep shipping — not a notebook.
+| Scale | | |
+|---|---|---|
+| **64,752** lines of Python | **2,484** routes | **32** database tables |
+| **626** page templates | **14,574** lines of JavaScript | **11** production stages |
 
-### 2. Multi-instance AI agent operations (10+ instances)
+Stack: Flask · PostgreSQL · Alembic · Jinja2 · esbuild · nginx · systemd · Kling · Alibaba Bailian · Volcengine · WeChat Pay v3 · Chatwoot
 
-Running ten-plus independent AI agent instances on one host, long term:
-- separate profiles, separate gateway processes, systemd supervision, Docker sandbox isolation
-- upgrade migrations, concurrency conflict triage, credential rotation, health checks
-- multi-model routing, keepalive, automatic recovery after disconnects
+**[→ Architecture, trade-offs, and 21 real production failures](https://github.com/wangdinwei/ai-drama-pipeline)**
 
-### 3. Local model deployment and tuning (single 24 GB GPU)
+**Also:**
 
-Making open-source models usable without a GPU cluster:
-- **Image**: ComfyUI + FLUX end to end (LoRA, ControlNet, IP-Adapter)
-- **Video / lipsync**: Wan family, Sonic, LatentSync — including hard-won findings on deadlock settings, fp16 vs bf16, and sharpness recovery when upscaling 512 → 1080
-- **Speech**: IndexTTS-2.5 local service (154 voices, voice cloning), CosyVoice, Whisper
-- **Text**: llama.cpp and vLLM local inference
+- **Multi-instance AI agent operations** — 10+ independent instances on one host: profile isolation, systemd, Docker sandboxing, version upgrades, auto-recovery
+- **Local model tuning on a single 24 GB GPU** — FLUX/ComfyUI image, Wan/Sonic/LatentSync video and lipsync, IndexTTS speech, llama.cpp text
+- **Document and data automation** — batch contract generation and review, ledger reconciliation, OCR reconstruction of scans, PDF typesetting, CAD extraction
 
-### 4. Document and data automation
+## Repositories
 
-Batch contract generation and review, ledger reconciliation, OCR reconstruction of scanned documents, PDF typesetting, CAD (DXF/DWG) data extraction. The goal here is *verifiably correct*, not *roughly right*.
-
----
+| | Repo | What's in it |
+|---|---|---|
+| 📐 | [ai-drama-pipeline](https://github.com/wangdinwei/ai-drama-pipeline) | Case study: architecture, trade-offs, cost model, **21 real failures** |
+| 🖥 | [local-gpu-deploy](https://github.com/wangdinwei/local-gpu-deploy) | Running open-source models on 24 GB: FLUX, ComfyUI, llama.cpp, music |
+| 🎬 | [kling-ai-skills](https://github.com/wangdinwei/kling-ai-skills) | Kling video production: identity consistency, lipsync, prompt quality gates |
+| 🧱 | [hermes-skills-kit](https://github.com/wangdinwei/hermes-skills-kit) | Engineering notes: 24 traps between demo and production |
+| 📄 | [chinese-doc-toolkit](https://github.com/wangdinwei/chinese-doc-toolkit) | Chinese business documents in Python: contracts, quotations, scans |
 
 ## Stack
 
@@ -58,28 +54,22 @@ Batch contract generation and review, ledger reconciliation, OCR reconstruction 
 | Languages | Python, JavaScript, SQL, Bash |
 | Backend | Flask, FastAPI, Flask-SQLAlchemy, Alembic, Celery/threaded tasks |
 | Data | PostgreSQL, SQLite, pandas/openpyxl |
-| Frontend | Jinja2, vanilla JS, esbuild, Tabler, hand-written CSS |
+| Frontend | Jinja2, vanilla JS, esbuild, hand-written CSS |
 | Infra | Linux, systemd, Docker, nginx, Caddy, Cloudflare Tunnel, SSL/DDNS |
 | Models | ComfyUI, FLUX, Wan, Sonic, LatentSync, IndexTTS, CosyVoice, Whisper, llama.cpp/vLLM |
 | Cloud APIs | Kling, Alibaba Bailian/DashScope, Volcengine, Runway, WeChat Pay v3, Feishu Open Platform |
-| Other | ffmpeg pipelines, Feishu/WeCom bots, report generation, jadx/apktool/Ghidra |
+| Other | ffmpeg pipelines, Feishu/WeCom bots, document generation, jadx/apktool/Ghidra |
 
----
+## Scope (so we both save time)
 
-## What I can take on
+**I do**: AI application development, model integration and tuning, automation systems, rescue work, document/data automation
+**I don't do**: design-only work, prompt-only work, decks without implementation, projects with no way to verify the result
 
-- **AI application development** — turning a business process into a shipped system (backend, frontend, deployment)
-- **Model integration and tuning** — wiring open-source or hosted models into an existing product, then tuning quality and cost to usable
-- **Automation delivery** — data movement, reporting, documents, support, task pipelines
-- **Rescue work** — diagnosing and restructuring systems that stall, break, or keep getting worse
-
-**Working mode**: remote, project-based or monthly. I don't deliver decks without implementation.
-
----
+**Mode**: remote, project-based or monthly.
 
 ## Contact
 
-- **Email**: 476743538@qq.com ← fastest way to reach me
-- WeChat / call available on request
+**Email: 476743538@qq.com** — fastest way to reach me
+Need WeChat or a call? Say so in the email and I'll send details.
 
 <sub>Updated regularly.</sub>
