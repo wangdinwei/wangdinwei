@@ -7,8 +7,10 @@
 <sub>EN · I take AI from "the demo works" to "it ships and makes money." — [English version](README.en.md)</sub>
 
 <p align="center">
-  <a href="https://wangdinwei.github.io"><b>🖥 个人主页 · wangdinwei.github.io</b></a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://lenghu.tech/me/"><b>📋 能力全景 · 16 个领域</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://wangdinwei.github.io"><b>🖥 个人主页</b></a>
+  &nbsp;·&nbsp;
   <a href="mailto:476743538@qq.com"><b>✉ 有活要谈，直接发邮件</b></a>
 </p>
 
@@ -59,7 +61,7 @@
 
 ## 做过什么
 
-**一套 AI 内容生产平台** — 从剧本到成片，11 个生产步骤，多用户、计费、可重做，不是 demo。
+**① 一套 AI 内容生产平台** — 从剧本到成片，11 个生产步骤，多用户、计费、可重做，不是 demo。
 
 | 规模 | | | |
 |---|---|---|---|
@@ -68,7 +70,17 @@
 
 技术栈：Flask · PostgreSQL · Alembic · Jinja2 · esbuild · nginx · systemd · Kling · 阿里百炼 · 火山引擎 · 微信支付 v3 · Chatwoot
 
-**[→ 架构复盘、技术取舍、21 个真实故障](https://github.com/wangdinwei/ai-drama-pipeline)**
+**[→ 架构复盘、技术取舍、21 个真实故障](https://github.com/wangdinwei/ai-drama-pipeline)** · **[→ 在线能力全景](https://lenghu.tech/me/)**
+
+**② 一套建筑工程管理小程序** — 移动端现场管理，从飞书小程序全量迁移到微信，已上线运营。
+
+| 规模 | | | |
+|---|---|---|---|
+| **45** 个页面 | **14** 个业务模块 | **4** 个版本迭代 |
+
+业务模块：项目 · 采购 · 进度 · 施工日志 · 合同 · 质量 · 安全 · 成本 · 风险 · 任务 · 供应商 · 工人 · 设备 · 材料
+
+技术栈：微信小程序原生（wx.*）· Vant · 自建 Node 后端 · miniprogram-ci 自动发布 · 腾讯云
 
 **另外做过的：**
 
